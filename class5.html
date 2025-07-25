@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   <style>
+    .rectangle{
+        width:200px;
+        height:200px;
+        border:1px solid black;
+        margin:auto;
+    }
+    .button{
+        padding:20px;
+        width:200px;
+        margin:auto;
+    }
+
+   </style>
+    </head>
+    <body>
+        <h1>Changing the CSS properties of html tags.</h1>
+        <div class="rectangle"></div>
+
+        <div class="button">
+            <button onclick="circle()">Make circle</button>
+            <button onclick="hide()">Hide</button>
+            <button onclick="show()">Show</button>
+        </div>
+        <script>
+            let diagram=document.querySelector(".rectangle")
+           function circle(){
+            diagram.style.borderRadius="50%"
+           }
+           function hide(){
+            diagram.style.opacity=0
+           }
+           function show(){
+            diagram.style.opacity=1
+           }
+           diagram.onmouseenter=function(){
+            diagram.style.background="red"
+           }
+           diagram.onmouseout=function(){
+            diagram.style.background="none"
+           }
+        </script>
+    </body>
+</html>
